@@ -44,7 +44,6 @@ def attach_indicator(indicator: str, data: pd.DataFrame) -> pd.DataFrame:
         rsi = None
         rsi = talib.RSI(data["Close"], timeperiod=14)
         return pd.DataFrame({"Close": data["Close"], "RSI": rsi})
-    
 
 
 def main():
