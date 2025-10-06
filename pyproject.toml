@@ -10,3 +10,16 @@ dependencies = [
     "ta-lib>=0.6.7",
     "yfinance>=0.2.66",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.3",
+]
+
+[tool.pytest.ini_options]
+adopts = "--maxfail=1 --cov=data_anna"
+
+[tool.ruff.lint]
+extend-select = ["B"]
